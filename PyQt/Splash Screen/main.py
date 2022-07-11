@@ -25,6 +25,7 @@ if __name__ == '__main__':
 
     tela = uic.loadUi(resource_path('main.ui'))
     tela.setWindowFlags(Qt.WindowType.FramelessWindowHint)
+    tela.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)
     
     tela2 = uic.loadUi(resource_path('window.ui'))
 
