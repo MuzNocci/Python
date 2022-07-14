@@ -1,4 +1,5 @@
 from PyQt6 import uic, QtWidgets
+import webbrowser
 
 
 import sys
@@ -29,6 +30,9 @@ def menu_limpar():
     tela.label_2.setText('Preto')
     tela.label_2.setStyleSheet('color:#000;font-size:25px;font-weight:bold;')
 
+def menu_sobre():
+    webbrowser.open('http://muller.nocciolli.com.br')
+
 
 app = QtWidgets.QApplication([])
 tela = uic.loadUi(resource_path('menu.ui'))
@@ -38,6 +42,7 @@ tela.actionAmarelo.triggered.connect(menu_amarelo)
 tela.actionVermelho.triggered.connect(menu_vermelho)
 tela.actionVerde.triggered.connect(menu_verde)
 tela.actionLimpar.triggered.connect(menu_limpar)
+tela.actionNocciolli.triggered.connect(menu_sobre)
 
 
 tela.show()

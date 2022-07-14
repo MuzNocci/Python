@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Janela com Menu Personalizado</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:rgb(85, 170, 255);</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label">
     <property name="geometry">
@@ -75,6 +78,9 @@
      <height>21</height>
     </rect>
    </property>
+   <property name="tabletTracking">
+    <bool>false</bool>
+   </property>
    <widget class="QMenu" name="menuCores">
     <property name="title">
      <string>Cores</string>
@@ -86,7 +92,14 @@
     <addaction name="separator"/>
     <addaction name="actionLimpar"/>
    </widget>
+   <widget class="QMenu" name="menuSobre">
+    <property name="title">
+     <string>Sobre</string>
+    </property>
+    <addaction name="actionNocciolli"/>
+   </widget>
    <addaction name="menuCores"/>
+   <addaction name="menuSobre"/>
   </widget>
   <action name="actionAzul">
    <property name="text">
@@ -111,6 +124,11 @@
   <action name="actionLimpar">
    <property name="text">
     <string>Limpar</string>
+   </property>
+  </action>
+  <action name="actionNocciolli">
+   <property name="text">
+    <string>Müller Nocciolli</string>
    </property>
   </action>
  </widget>

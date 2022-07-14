@@ -24,6 +24,7 @@ class Ui_mainWindow(object):
         if not mainWindow.objectName():
             mainWindow.setObjectName(u"mainWindow")
         mainWindow.resize(800, 600)
+        mainWindow.setStyleSheet(u"background-color:rgb(85, 170, 255);")
         self.actionAzul = QAction(mainWindow)
         self.actionAzul.setObjectName(u"actionAzul")
         self.actionAmarelo = QAction(mainWindow)
@@ -34,6 +35,8 @@ class Ui_mainWindow(object):
         self.actionVerde.setObjectName(u"actionVerde")
         self.actionLimpar = QAction(mainWindow)
         self.actionLimpar.setObjectName(u"actionLimpar")
+        self.actionNocciolli = QAction(mainWindow)
+        self.actionNocciolli.setObjectName(u"actionNocciolli")
         self.centralwidget = QWidget(mainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.label = QLabel(self.centralwidget)
@@ -54,17 +57,22 @@ class Ui_mainWindow(object):
         self.menubar = QMenuBar(mainWindow)
         self.menubar.setObjectName(u"menubar")
         self.menubar.setGeometry(QRect(0, 0, 800, 21))
+        self.menubar.setTabletTracking(False)
         self.menuCores = QMenu(self.menubar)
         self.menuCores.setObjectName(u"menuCores")
+        self.menuSobre = QMenu(self.menubar)
+        self.menuSobre.setObjectName(u"menuSobre")
         mainWindow.setMenuBar(self.menubar)
 
         self.menubar.addAction(self.menuCores.menuAction())
+        self.menubar.addAction(self.menuSobre.menuAction())
         self.menuCores.addAction(self.actionAzul)
         self.menuCores.addAction(self.actionAmarelo)
         self.menuCores.addAction(self.actionVermelho)
         self.menuCores.addAction(self.actionVerde)
         self.menuCores.addSeparator()
         self.menuCores.addAction(self.actionLimpar)
+        self.menuSobre.addAction(self.actionNocciolli)
 
         self.retranslateUi(mainWindow)
 
@@ -78,8 +86,10 @@ class Ui_mainWindow(object):
         self.actionVermelho.setText(QCoreApplication.translate("mainWindow", u"Vermelho", None))
         self.actionVerde.setText(QCoreApplication.translate("mainWindow", u"Verde", None))
         self.actionLimpar.setText(QCoreApplication.translate("mainWindow", u"Limpar", None))
+        self.actionNocciolli.setText(QCoreApplication.translate("mainWindow", u"M\u00fcller Nocciolli", None))
         self.label.setText(QCoreApplication.translate("mainWindow", u"Op\u00e7\u00e3o selecionada no menu:", None))
         self.label_2.setText(QCoreApplication.translate("mainWindow", u"Preto", None))
         self.menuCores.setTitle(QCoreApplication.translate("mainWindow", u"Cores", None))
+        self.menuSobre.setTitle(QCoreApplication.translate("mainWindow", u"Sobre", None))
     # retranslateUi
 
