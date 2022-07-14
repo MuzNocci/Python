@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainWindow</class>
+ <widget class="QMainWindow" name="mainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Janela com Menu Personalizado</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>371</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size:25px;font-weight:bold;</string>
+    </property>
+    <property name="text">
+     <string>Opção selecionada no menu:</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>80</y>
+      <width>761</width>
+      <height>481</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:#fff;border-radius:20px;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>20</y>
+       <width>201</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size:25px; font-weight:bold;color:black;</string>
+     </property>
+     <property name="text">
+      <string>Preto</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuCores">
+    <property name="title">
+     <string>Cores</string>
+    </property>
+    <addaction name="actionAzul"/>
+    <addaction name="actionAmarelo"/>
+    <addaction name="actionVermelho"/>
+    <addaction name="actionVerde"/>
+    <addaction name="separator"/>
+    <addaction name="actionLimpar"/>
+   </widget>
+   <addaction name="menuCores"/>
+  </widget>
+  <action name="actionAzul">
+   <property name="text">
+    <string>Azul</string>
+   </property>
+  </action>
+  <action name="actionAmarelo">
+   <property name="text">
+    <string>Amarelo</string>
+   </property>
+  </action>
+  <action name="actionVermelho">
+   <property name="text">
+    <string>Vermelho</string>
+   </property>
+  </action>
+  <action name="actionVerde">
+   <property name="text">
+    <string>Verde</string>
+   </property>
+  </action>
+  <action name="actionLimpar">
+   <property name="text">
+    <string>Limpar</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
